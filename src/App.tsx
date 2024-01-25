@@ -7,7 +7,6 @@ import {
   Hero,
   Navbar,
   StarsCanvas,
-  Tech,
   Works,
 } from './components';
 

@@ -59,7 +59,7 @@ interface Project {
   source_code_link: string;
 }
 
-interface Tag {
+export interface Tag {
   name: string;
   color: string;
 }
