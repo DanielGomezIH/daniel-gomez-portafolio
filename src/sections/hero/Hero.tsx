@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-import { styles } from '../Styles';
-import { ComputersCanvas } from './canvas';
+import { styles } from '../../Styles';
+import { ComputersCanvas } from '../../components/canvas';
 
 const Hero: React.FC = () => {
   return (

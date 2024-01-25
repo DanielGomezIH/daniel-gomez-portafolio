@@ -1,10 +1,10 @@
 import { VerticalTimeline } from 'react-vertical-timeline-component';
 import { motion } from 'framer-motion';
 import 'react-vertical-timeline-component/style.min.css';
-import { styles } from '../Styles';
-import { textVariant } from '../utils/motion';
-import { ExperienceCard } from '../components';
-import { experiences } from '../constants/Constants';
+import { styles } from '../../Styles';
+import { textVariant } from '../../utils/motion';
+import { ExperienceCard } from '../';
+import { experiences } from '../../data/Constants';
 
 const Experience: React.FC = () => {
   return (

@@ -1,11 +1,10 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { styles } from '../Styles';
-import { logo, menu, close } from '../assets';
-import { navLinks } from '../constants/Constants';
+import { styles } from '../../Styles';
+import { logo, menu, close } from '../../assets';
+import { navLinks } from '../../data/Constants';
 
-
-const Navbar:React.FC = () => {
+const Navbar: React.FC = () => {
   const [active, setActive] = useState<string>('');
   const [toggle, setToggle] = useState<boolean>(false);
 
@@ -82,4 +81,4 @@ const Navbar:React.FC = () => {
   );
 };
 
-export default Navbar
+export default Navbar;

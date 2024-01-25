@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
-import { styles } from '../Styles';
-import { fadeIn, textVariant } from '../utils/motion';
-import { testimonials } from '../constants/Constants';
+import { styles } from '../../Styles';
+import { fadeIn, textVariant } from '../../utils/motion';
+import { testimonials } from '../../data/Constants';
 
 interface FeedbackCardProps {
   index: number;

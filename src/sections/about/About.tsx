@@ -1,9 +1,9 @@
 /* eslint-disable react-refresh/only-export-components */
 import { motion } from 'framer-motion';
-import { styles } from '../Styles';
-import { fadeIn, textVariant } from '../utils/motion';
-import { ServiceCard } from '../components';
-import { services } from '../constants/Constants';
+import { styles } from '../../Styles';
+import { fadeIn, textVariant } from '../../utils/motion';
+import { ServiceCard } from '..';
+import { services } from '../../data/Constants';
 
 const About: React.FC = () => {
   return (

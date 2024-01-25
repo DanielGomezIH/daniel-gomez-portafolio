@@ -1,12 +1,12 @@
 import { Tilt } from 'react-tilt';
 import { motion } from 'framer-motion';
-import { styles } from '../Styles';
-import { github } from '../assets';
-import { fadeIn, textVariant } from '../utils/motion';
+import { styles } from '../../Styles';
+import { github } from '../../assets';
+import { fadeIn, textVariant } from '../../utils/motion';
 import { getDocs } from 'firebase/firestore';
 import { useState, useEffect } from 'react';
-import { projectsRef } from '../constants';
-import { Tag } from '../constants/Constants';
+import { projectsRef } from '../../data';
+import { Tag } from '../../data/Constants';
 
 interface DocumentProject {
   index: number;
@@ -99,7 +99,7 @@ const Works: React.FC = () => {
 
   return (
     <motion.section
-      variants={textVariant(0.2)}
+      variants={textVariant(0)}
       initial='hidden'
       whileInView='show'
       viewport={{ once: true, amount: 0.25 }}
@@ -125,7 +125,7 @@ const Works: React.FC = () => {
       </div>
 
       <motion.div
-        variants={textVariant(0)}
+        variants={textVariant(0.5)}
         className='mt-20 flex flex-wrap md:w-full  gap-7'
       >
         {project.map((project, index) => (
