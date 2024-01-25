@@ -1,33 +1,13 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { getDocs } from 'firebase/firestore';
-
-import { navLinksRef } from '../constants/FirebaseStore';
 import { styles } from '../Styles';
 import { logo, menu, close } from '../assets';
+import { navLinks } from '../constants/Constants';
 
-interface Document {
-  id: string;
-  title: string;
-}
 
-const Navbar = () => {
-  const [navLink, setNavLink] = useState<Document[]>([]);
+const Navbar:React.FC = () => {
   const [active, setActive] = useState<string>('');
   const [toggle, setToggle] = useState<boolean>(false);
-
-  const fetchData = async (): Promise<void> => {
-    const snapshot = await getDocs(navLinksRef);
-    const documentData = snapshot.docs.map((doc) => ({
-      id: doc.id,
-      title: doc.data().title as string,
-    }));
-    setNavLink(documentData);
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
 
   return (
     <nav
@@ -36,7 +16,7 @@ const Navbar = () => {
       <div className='w-full flex justify-between max-w-7xl mx-auto'>
         <Link
           to='/'
-          className='flex items-center max-[997px]:items-start max-md:items-center max-[262px]:items-start gap-3'
+          className='flex items-center max-[997px]:items-start max-md:items-center  max-[262px]:items-start gap-3'
           onClick={() => {
             setActive('');
             window.scrollTo(0, 0);
@@ -51,7 +31,7 @@ const Navbar = () => {
           </p>
         </Link>
         <ul className='list-none hidden sm:flex  max-md:items-center max-[997px]:items-start  items-center flex-row gap-10'>
-          {navLink.map((Link) => (
+          {navLinks.map((Link) => (
             <li
               key={Link.id}
               className={`${
@@ -80,7 +60,7 @@ const Navbar = () => {
             } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
           >
             <ul className='list-none flex justify-end items-start flex-col gap-4'>
-              {navLink.map((Link) => (
+              {navLinks.map((Link) => (
                 <li
                   key={Link.id}
                   className={`${
@@ -102,4 +82,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbar

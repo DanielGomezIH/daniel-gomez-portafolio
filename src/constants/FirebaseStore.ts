@@ -16,15 +16,4 @@ const app = initializeApp(firebaseConfig);
 
 export const db = getFirestore(app);
 
-export const navLinksRef = collection(db, 'navLinks');
-
-export const servicesRef = collection(db, 'services');
-
-export const technologiesRef = collection(db, 'technologies');
-
-export const experiencesRef = collection(db, 'experiences');
-
-export const testimonialsRef = collection(db, 'testimonials');
-
 export const projectsRef = collection(db, 'projects');
-

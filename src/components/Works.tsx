@@ -6,7 +6,7 @@ import { fadeIn, textVariant } from '../utils/motion';
 import { getDocs } from 'firebase/firestore';
 import { useState, useEffect } from 'react';
 import { projectsRef } from '../constants';
-import { Tag } from '../constants/ConstantsInfo';
+import { Tag } from '../constants/Constants';
 
 interface DocumentProject {
   index: number;
@@ -73,7 +73,7 @@ const ProjectCard: React.FC<DocumentProject> = ({
   );
 };
 
-const Works = () => {
+const Works: React.FC = () => {
   const [project, setProject] = useState<DocumentProject[]>([]);
 
   const fetchData = async (): Promise<void> => {
@@ -98,8 +98,16 @@ const Works = () => {
   }, []);
 
   return (
-    <>
-      <motion.div variants={textVariant(0)}>
+    <motion.section
+      variants={textVariant(0.2)}
+      initial='hidden'
+      whileInView='show'
+      viewport={{ once: true, amount: 0.25 }}
+      className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
+    >
+      <span className='hash-span'>&nbsp;</span>
+
+      <motion.div>
         <p className={`${styles.sectionSubText}`}>My Work</p>
         <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
       </motion.div>
@@ -116,12 +124,15 @@ const Works = () => {
         </motion.p>
       </div>
 
-      <div className='mt-20 flex flex-wrap md:w-full  gap-7'>
+      <motion.div
+        variants={textVariant(0)}
+        className='mt-20 flex flex-wrap md:w-full  gap-7'
+      >
         {project.map((project, index) => (
           <ProjectCard key={`project-${index}`} {...project} />
         ))}
-      </div>
-    </>
+      </motion.div>
+    </motion.section>
   );
 };
 

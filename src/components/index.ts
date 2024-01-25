@@ -12,6 +12,8 @@ import Works from './Works';
 import Feedbacks from './Feedbacks';
 import Contact from './Contact';
 import ServiceCard from './ServiceCard';
+import ExperienceCard from './ExperienceCard';
+('./ExperienceCard');
 
 export {
   Hero,
@@ -26,4 +28,5 @@ export {
   ComputersCanvas,
   StarsCanvas,
   ServiceCard,
+  ExperienceCard,
 };

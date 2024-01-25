@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { styles } from '../Styles';
 import { ComputersCanvas } from './canvas';
 
-const Hero = () => {
+const Hero: React.FC = () => {
   return (
     <section className='relative w-full h-screen mx-auto'>
       <div

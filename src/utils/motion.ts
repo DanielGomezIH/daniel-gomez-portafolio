@@ -1,3 +1,4 @@
+
 export const textVariant = (delay: number) => {
   return {
     hidden: {
@@ -9,7 +10,7 @@ export const textVariant = (delay: number) => {
       opacity: 1,
       transition: {
         type: 'spring',
-        duration: 1.25,
+        duration: 1,
         delay: delay,
       },
     },
@@ -85,14 +86,3 @@ export const slideIn = (
   };
 };
 
-export const staggerContainer = (staggerChildren: boolean | number, delayChildren: boolean | number): object => {
-  return {
-    hidden: {},
-    show: {
-      transition: {
-        staggerChildren: staggerChildren,
-        delayChildren: delayChildren || 0,
-      },
-    },
-  };
-};

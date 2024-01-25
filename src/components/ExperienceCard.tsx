@@ -1,10 +1,10 @@
 import { VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import { DocumentExperience } from './Experience';
+import { Experience } from '../constants/Constants';
 
 
 interface ExperienceCardProps {
-  experience: DocumentExperience;
+  experience: Experience
 }
 
 const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => (

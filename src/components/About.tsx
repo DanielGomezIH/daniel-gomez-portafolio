@@ -1,35 +1,23 @@
-import { useState, useEffect } from 'react';
+/* eslint-disable react-refresh/only-export-components */
 import { motion } from 'framer-motion';
 import { styles } from '../Styles';
 import { fadeIn, textVariant } from '../utils/motion';
-import { getDocs } from 'firebase/firestore';
-import { servicesRef } from '../constants';
 import { ServiceCard } from '../components';
+import { services } from '../constants/Constants';
 
-interface DocumentService {
-  title: string;
-  icon: string;
-}
-
-const About = () => {
-  const [service, setService] = useState<DocumentService[]>([]);
-
-  const fetchData = async (): Promise<void> => {
-    const snapshot = await getDocs(servicesRef);
-    const documentData = snapshot.docs.map((doc) => ({
-      title: doc.data().title as string,
-      icon: doc.data().icon as string,
-    }));
-    setService(documentData);
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
+const About: React.FC = () => {
   return (
-    <>
-      <motion.div variants={textVariant(0)}>
+    <motion.section
+      variants={textVariant(0)}
+      initial='hidden'
+      whileInView='show'
+      viewport={{ once: true, amount: 0.25 }}
+      className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
+    >
+      <span className='hash-span' id='about'>
+        &nbsp;
+      </span>
+      <motion.div>
         <p className={`${styles.sectionSubText}`}>Introduction</p>
         <h2 className={`${styles.sectionHeadText}`}>Overview.</h2>
       </motion.div>
@@ -44,12 +32,15 @@ const About = () => {
         eaque?
       </motion.p>
 
-      <div className='mt-20 flex flex-wrap justify-start max-[957px]:justify-center gap-10'>
-        {service.map((service, index) => (
+      <motion.div
+        variants={textVariant(0.5)}
+        className='mt-20 flex flex-wrap justify-start max-[957px]:justify-center gap-10'
+      >
+        {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
-      </div>
-    </>
+      </motion.div>
+    </motion.section>
   );
 };
 
