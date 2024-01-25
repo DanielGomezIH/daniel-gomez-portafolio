@@ -6,13 +6,13 @@ import { navLinksRef } from '../constants/FirebaseStore';
 import { styles } from '../Styles';
 import { logo, menu, close } from '../assets';
 
-interface Document {
+interface DocumentLink {
   id: string;
   title: string;
 }
 
 const Navbar = () => {
-  const [navLink, setNavLink] = useState<Document[]>([]);
+  const [navLink, setNavLink] = useState<DocumentLink[]>([]);
   const [active, setActive] = useState<string>('');
   const [toggle, setToggle] = useState<boolean>(false);
 
