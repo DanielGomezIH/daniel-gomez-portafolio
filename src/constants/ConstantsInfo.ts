@@ -19,7 +19,7 @@ import {
   tripguide,
 } from '../assets';
 
-interface NavLink {
+export interface NavLink {
   id: string;
   title: string;
 }
