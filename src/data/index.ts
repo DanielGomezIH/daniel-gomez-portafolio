@@ -1,5 +1,3 @@
-import { projectsRef } from './FirebaseStore';
+import { projectsRef, curriculumRef } from './FirebaseStore';
 
-export {
-  projectsRef,
-};
+export { projectsRef, curriculumRef };

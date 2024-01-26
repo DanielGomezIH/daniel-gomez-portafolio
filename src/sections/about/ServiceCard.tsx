@@ -16,7 +16,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ index, title, icon }) => {
         scale: 1,
         speed: 450,
       }}
-      className='xs:w-[250px] w-full'
+      className=' w-full sm:w-[250px]'
     >
       <motion.div
         variants={fadeIn('right', 'spring', 0.5 * index, 0.75)}

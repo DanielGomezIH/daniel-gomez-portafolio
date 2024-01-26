@@ -123,7 +123,7 @@ const Works: React.FC = () => {
           inventore officia accusantium.
         </motion.p>
       </div>
-
+      
       <motion.div
         variants={textVariant(0.5)}
         className='mt-20 flex flex-wrap md:w-full  gap-7'

@@ -17,3 +17,5 @@ const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 
 export const projectsRef = collection(db, 'projects');
+
+export const curriculumRef = collection(db, 'curriculum');
