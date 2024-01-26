@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
 
         <div>
           <h1 className={`${styles.heroHeadText}`}>
-            Hi, I'm <span className='text-[#915eff]'>Daniel</span>
+            Hola, soy <span className='text-[#915eff]'>Daniel</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             I develop 3D visuals, user <br className='sm:block hidden' />{' '}
@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
       <ComputersCanvas />
 
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
-        <a href='#about'>
+        <a href='#conóceme'>
           <div className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2 '>
             <motion.div
               animate={{

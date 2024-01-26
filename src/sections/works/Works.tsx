@@ -1,7 +1,7 @@
 import { Tilt } from 'react-tilt';
 import { motion } from 'framer-motion';
 import { styles } from '../../Styles';
-import { github } from '../../assets';
+import { youtube } from '../../assets';
 import { fadeIn, textVariant } from '../../utils/motion';
 import { getDocs } from 'firebase/firestore';
 import { useState, useEffect } from 'react';
@@ -48,8 +48,8 @@ const ProjectCard: React.FC<DocumentProject> = ({
               onClick={() => window.open(source_code_link, '_blank')}
             >
               <img
-                src={github}
-                alt='github'
+                src={youtube}
+                alt='youtube'
                 className='w-1/2 h-1/2 object-contain'
               />
             </div>
@@ -105,7 +105,7 @@ const Works: React.FC = () => {
       viewport={{ once: true, amount: 0.25 }}
       className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
     >
-      <span className='hash-span'>&nbsp;</span>
+      <span className='hash-span' id='proyectos'>&nbsp;</span>
 
       <motion.div>
         <p className={`${styles.sectionSubText}`}>My Work</p>

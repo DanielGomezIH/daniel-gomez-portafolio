@@ -63,16 +63,20 @@ export interface Tag {
 
 export const navLinks: NavLink[] = [
   {
-    id: 'about',
-    title: 'About',
+    id: 'conóceme',
+    title: 'Conóceme',
   },
   {
-    id: 'work',
-    title: 'Work',
+    id: 'proyectos',
+    title: 'Proyectos',
   },
   {
-    id: 'contact',
-    title: 'Contact',
+    id: 'experiencia',
+    title: 'Experiencia',
+  },
+  {
+    id: 'contacto',
+    title: 'Contacto',
   },
 ];
 
@@ -195,7 +199,5 @@ const testimonials: Testimonial[] = [
     image: 'https://randomuser.me/api/portraits/women/6.jpg',
   },
 ];
-
-
 
 export { services, technologies, experiences, testimonials };

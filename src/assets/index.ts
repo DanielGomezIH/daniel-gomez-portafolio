@@ -4,6 +4,7 @@ import creator from './png/creator.png';
 import mobile from './png/mobile.png';
 import web from './png/web.png';
 import github from './png/github.png';
+import youtube from './png/youtube.png'
 import menu from './svg/menu.svg';
 import close from './svg/close.svg';
 
@@ -36,6 +37,7 @@ export {
   mobile,
   web,
   github,
+  youtube,
   menu,
   close,
   css,

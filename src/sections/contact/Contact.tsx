@@ -32,8 +32,8 @@ const Contact: React.FC = () => {
 
     emailjs
       .send(
-        'service_ta4hxfw',
-        'template_fussyyg',
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
         {
           from_name: form.name,
           to_name: 'Daniel Gómez',
@@ -41,7 +41,7 @@ const Contact: React.FC = () => {
           to_email: 'danielivgho5@gmail.com',
           message: form.message,
         },
-        'DnpZZqAJ0_ZS9UCh9'
+        import.meta.env.VITE_PUBLIC_KEY
       )
       .then(
         (result) => {
@@ -72,7 +72,7 @@ const Contact: React.FC = () => {
       viewport={{ once: true, amount: 0.25 }}
       className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
     >
-      <span className='hash-span' id='contact'>
+      <span className='hash-span' id='contacto'>
         &nbsp;
       </span>
 
