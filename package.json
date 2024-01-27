@@ -13,6 +13,7 @@
     "@emailjs/browser": "^3.12.1",
     "@react-three/drei": "^9.96.1",
     "@react-three/fiber": "^8.15.15",
+    "@remixicon/react": "^4.1.1",
     "firebase": "^10.7.2",
     "framer-motion": "^11.0.3",
     "react": "^18.2.0",

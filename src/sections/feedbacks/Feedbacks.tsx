@@ -65,7 +65,7 @@ const Feedbacks: React.FC = () => {
         >
           <motion.div>
             <p className={`${styles.heroSubText}`}>What others say</p>
-            <h2 className={`${styles.heroHeadText}`}>Testimonials</h2>
+            <h2 className={`${styles.heroHeadText}`}>Comentarios</h2>
           </motion.div>
         </div>
         <motion.div

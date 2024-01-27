@@ -15,6 +15,7 @@ interface DocumentProject {
   tags: Tag[];
   image: string;
   source_code_link: string;
+  subname: string;
 }
 
 const ProjectCard: React.FC<DocumentProject> = ({
@@ -24,6 +25,7 @@ const ProjectCard: React.FC<DocumentProject> = ({
   tags,
   image,
   source_code_link,
+  subname
 }) => {
   return (
     <motion.div variants={fadeIn('up', 'spring', index * 0.5, 0.75)}>
@@ -58,6 +60,7 @@ const ProjectCard: React.FC<DocumentProject> = ({
 
         <div className='mt-5 '>
           <h3 className='text-white font-semibold text-[24px]'>{name}</h3>
+          <h4 className='text-white font-light text-[18px]'>{subname}</h4>
           <p className='mt-2 text-secondary text-base'>{description}</p>
         </div>
 
@@ -79,7 +82,7 @@ const Works: React.FC = () => {
   const fetchData = async (): Promise<void> => {
     const snapshot = await getDocs(projectsRef);
     const documentData = snapshot.docs.map((doc, index) => {
-      const { name, description, tags, image, source_code_link } = doc.data();
+      const { name, description, tags, image, source_code_link, subname } = doc.data();
 
       return {
         index: index as number,
@@ -88,6 +91,7 @@ const Works: React.FC = () => {
         tags: tags as Tag[],
         image: image as string,
         source_code_link: source_code_link as string,
+        subname: subname as string
       };
     });
     setProject(documentData);
@@ -105,11 +109,13 @@ const Works: React.FC = () => {
       viewport={{ once: true, amount: 0.25 }}
       className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
     >
-      <span className='hash-span' id='proyectos'>&nbsp;</span>
+      <span className='hash-span' id='proyectos'>
+        &nbsp;
+      </span>
 
       <motion.div>
-        <p className={`${styles.sectionSubText}`}>My Work</p>
-        <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
+        <p className={`${styles.sectionSubText}`}>Mi Trabajo</p>
+        <h2 className={`${styles.sectionHeadText}`}>Proyectos Destacados.</h2>
       </motion.div>
 
       <div className='w-full flex'>
@@ -117,13 +123,19 @@ const Works: React.FC = () => {
           variants={fadeIn('', '', 0.1, 1)}
           className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
-          praesentium similique harum illo nesciunt sunt facere dolore. Ab a
-          praesentium beatae sequi blanditiis? Qui eligendi recusandae eos
-          inventore officia accusantium.
+          En mi trayectoria, he tenido el privilegio de participar en proyectos
+          que van más allá de las expectativas. Cada experiencia ha sido una
+          oportunidad única para aplicar mi creatividad y habilidades, brindando
+          resultados que destacan por su calidad y originalidad. De la
+          conceptualización a la ejecución,{' '}
+          <span className='text-[#73ffff]'>
+            cada proyecto representa un compromiso con la excelencia y la
+            innovación
+          </span>
+          .
         </motion.p>
       </div>
-      
+
       <motion.div
         variants={textVariant(0.5)}
         className='mt-20 flex flex-wrap md:w-full  gap-7'

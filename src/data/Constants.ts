@@ -14,6 +14,10 @@ import {
   starbucks,
   tesla,
   shopify,
+  grabación_multitrack,
+  sonido_directo,
+  banda_sonora,
+  doblaje_adr,
 } from '../assets';
 
 export interface NavLink {
@@ -82,20 +86,20 @@ export const navLinks: NavLink[] = [
 
 const services: Service[] = [
   {
-    title: 'Web Developer',
-    icon: web,
+    title: 'Grabación en Estudio Multitrack',
+    icon: grabación_multitrack,
   },
   {
-    title: 'React Native Developer',
-    icon: mobile,
+    title: 'Sonido Directo y Postproducción',
+    icon: sonido_directo,
   },
   {
-    title: 'Backend Developer',
-    icon: backend,
+    title: 'Diseño de banda sonora',
+    icon: banda_sonora,
   },
   {
-    title: 'Content Creator',
-    icon: creator,
+    title: 'Doblaje y ADR',
+    icon: doblaje_adr,
   },
 ];
 

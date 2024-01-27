@@ -8,6 +8,11 @@ import youtube from './png/youtube.png';
 import menu from './svg/menu.svg';
 import close from './svg/close.svg';
 
+import banda_sonora from './png/habilidades/banda_sonora.png';
+import doblaje_adr from './png/habilidades/doblaje_adr.png';
+import grabación_multitrack from './png/habilidades/grabación_multitrack.png';
+import sonido_directo from './png/habilidades/sonido_directo.png';
+
 import css from './tech/css.png';
 import docker from './tech/docker.png';
 import figma from './tech/figma.png';
@@ -62,4 +67,8 @@ export {
   jobit,
   tripguide,
   perfil,
+  banda_sonora,
+  doblaje_adr,
+  grabación_multitrack,
+  sonido_directo,
 };

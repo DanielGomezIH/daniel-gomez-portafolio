@@ -28,6 +28,14 @@ const Contact: React.FC = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (form.name === '' || form.email === '' || form.message === '') {
+      alert(
+        'Por favor, completa todos los campos antes de enviar el formulario. :)'
+      );
+      return;
+    }
+
     setLoading(true);
 
     emailjs
@@ -46,7 +54,7 @@ const Contact: React.FC = () => {
       .then(
         (result) => {
           setLoading(false);
-          alert('Thank you, I will get back to you as soon as possible.');
+          alert('¡Gracias, estaré contigo tan pronto sea posible!');
 
           setForm({
             name: '',
@@ -59,7 +67,7 @@ const Contact: React.FC = () => {
 
           console.log(error);
 
-          alert('Something went wrong..');
+          alert('Ups, algo salió mal...');
         }
       );
   };
@@ -81,8 +89,8 @@ const Contact: React.FC = () => {
           variants={slideIn('left', 'tween', 0.2, 1)}
           className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
         >
-          <p className={`${styles.heroSubText}`}>Get in touch</p>
-          <h3 className={`${styles.heroHeadText}`}>Contact.</h3>
+          <p className={`${styles.heroSubText}`}>Encantado de ayudarte.</p>
+          <h3 className={`${styles.heroHeadText}`}>Contáctame.</h3>
 
           <form
             ref={formRef}
@@ -90,35 +98,37 @@ const Contact: React.FC = () => {
             className='mt-12 flex flex-col gap-8'
           >
             <label className='flex flex-col'>
-              <span className='text-white font-medium mb-4'>Your Name</span>
+              <span className='text-white font-medium mb-4'>Tu nombre</span>
               <input
                 type='text'
                 name='name'
                 value={form.name}
                 onChange={handleChange}
-                placeholder={`What's your name?`}
+                placeholder={`¿Cuál es tu nombre?`}
                 className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium'
               />
             </label>
             <label className='flex flex-col'>
-              <span className='text-white font-medium mb-4'>Your Email</span>
+              <span className='text-white font-medium mb-4'>
+                Tu correo electrónico
+              </span>
               <input
                 type='email'
                 name='email'
                 value={form.email}
                 onChange={handleChange}
-                placeholder={`What's your email?`}
+                placeholder={`¿Cuál es tu correo electrónico?`}
                 className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium'
               />
             </label>
             <label className='flex flex-col'>
-              <span className='text-white font-medium mb-4'>Your Message</span>
+              <span className='text-white font-medium mb-4'>Tu mensaje</span>
               <textarea
                 rows={7}
                 name='message'
                 value={form.message}
                 onChange={handleChange}
-                placeholder='What do you want to say?'
+                placeholder='¿Qué estás pensando?'
                 className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium'
               />
             </label>
@@ -126,7 +136,7 @@ const Contact: React.FC = () => {
               type='submit'
               className='bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl'
             >
-              {loading ? 'Sending' : 'Send'}
+              {loading ? 'Enviando' : 'Enviar'}
             </button>
           </form>
         </motion.div>
