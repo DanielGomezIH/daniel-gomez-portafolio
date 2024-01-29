@@ -9,7 +9,7 @@ interface ComputersProps {
 }
 
 const Computers: React.FC<ComputersProps> = ({ isMobile }) => {
-  const computer = useGLTF('src/public/desktop_pc/scene.gltf');
+  const computer = useGLTF('public/desktop_pc/scene.gltf');
 
   return (
     <mesh>

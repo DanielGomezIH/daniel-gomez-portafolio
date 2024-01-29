@@ -12,7 +12,7 @@ interface ContactInputProps {
 }
 
 const Contact: React.FC = () => {
-  const formRef = useRef();
+  const formRef = useRef(null);
   const [form, setForm] = useState<ContactInputProps>({
     name: '',
     email: '',
@@ -52,7 +52,7 @@ const Contact: React.FC = () => {
         import.meta.env.VITE_PUBLIC_KEY
       )
       .then(
-        (result) => {
+        () => {
           setLoading(false);
           alert('¡Gracias, estaré contigo tan pronto sea posible!');
 

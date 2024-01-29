@@ -36,6 +36,7 @@ import tripguide from './png/tripguide.png';
 
 import perfil from './png/perfil.jpeg';
 
+
 export {
   logo,
   logo_d,

@@ -107,7 +107,7 @@ const experiences: Experience[] = [
     title: 'Estudiante de Tecnología en Producción de Sonido',
     company_name: 'CORPORACIÓN UNIVERSITARIA UNITEC',
     icon: unitec,
-    iconBg: '#E6DEDD',
+    iconBg: '#383E56',
     date: 'Septiembre 2021 - Presente',
     points: [
       'Desarrollar la identidad sonora de una empresa local a través de la creación de dos cuñas radiales, un Jingle y un audio logo.',
