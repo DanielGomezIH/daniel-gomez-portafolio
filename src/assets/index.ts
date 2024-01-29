@@ -1,4 +1,5 @@
 import logo from './svg/logo.svg';
+import logo_d from './svg/logo_d.svg';
 import backend from './png/backend.png';
 import creator from './png/creator.png';
 import mobile from './png/mobile.png';
@@ -26,10 +27,8 @@ import redux from './tech/redux.png';
 import tailwind from './tech/tailwind.png';
 import typescript from './tech/typescript.png';
 
-import meta from './company/meta.png';
-import shopify from './company/shopify.png';
-import starbucks from './company/starbucks.png';
-import tesla from './company/tesla.png';
+import geezy from './png/geezy.jpg';
+import unitec from './png/unitec.png';
 
 import carrent from './png/carrent.png';
 import jobit from './png/jobit.png';
@@ -39,6 +38,7 @@ import perfil from './png/perfil.jpeg';
 
 export {
   logo,
+  logo_d,
   backend,
   creator,
   mobile,
@@ -59,10 +59,8 @@ export {
   redux,
   tailwind,
   typescript,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
+  geezy,
+  unitec,
   carrent,
   jobit,
   tripguide,

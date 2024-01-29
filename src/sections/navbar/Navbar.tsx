@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { styles } from '../../Styles';
-import { logo, menu, close } from '../../assets';
+import { logo_d, menu, close } from '../../assets';
 import { navLinks } from '../../data/Constants';
 
 const Navbar: React.FC = () => {
@@ -21,7 +21,7 @@ const Navbar: React.FC = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
+          <img src={logo_d} alt='logo' className='w-9 h-9 object-contain rounded-full' />
           <p className='text-white text-[18px] font-semibold cursor-pointer flex max-md:flex-col mr-10 max-md:mr-8 '>
             Daniel Gómez &nbsp;
             <span className='md:block hidden'>
