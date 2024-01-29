@@ -15,6 +15,12 @@ import close from './svg/close.svg';
 import logo_d from './svg/logo_d.svg';
 import menu from './svg/menu.svg';
 
+import COLEGIO_4C from './gif/COLEGIO DISTRITAL GERARDO PAREDES/COLEGIO_4C.gif';
+import TEKNE_3C from './gif/DOCUMENTAL TEKNÉ/TEKNE_3C.gif';
+import CAPITULO_1C from './gif/LA LLAVE DE LA VIDA/CAPITULO_1C.gif';
+import CAPITULO_2C from './gif/LA LLAVE DE LA VIDA/CAPITULO_2C.gif';
+import CAPITULO_3C from './gif/LA LLAVE DE LA VIDA/CAPITULO_3C.gif';
+
 export {
   banda_sonora,
   doblaje_adr,
@@ -30,4 +36,9 @@ export {
   close,
   logo_d,
   menu,
+  COLEGIO_4C,
+  TEKNE_3C,
+  CAPITULO_1C,
+  CAPITULO_2C,
+  CAPITULO_3C,
 };

@@ -3,22 +3,11 @@ import { motion } from 'framer-motion';
 import { styles } from '../../Styles';
 import { youtube } from '../../assets';
 import { fadeIn, textVariant } from '../../utils/motion';
-import { getDocs } from 'firebase/firestore';
-import { useState, useEffect } from 'react';
-import { projectsRef } from '../../data';
-import { Tag } from '../../data/Constants';
+import { Project, projects } from '../../data/Constants';
 
-interface DocumentProject {
-  index: number;
-  name: string;
-  description: string;
-  tags: Tag[];
-  image: string;
-  source_code_link: string;
-  subname: string;
-}
 
-const ProjectCard: React.FC<DocumentProject> = ({
+
+const ProjectCard: React.FC<Project> = ({
   index,
   name,
   description,
@@ -77,29 +66,6 @@ const ProjectCard: React.FC<DocumentProject> = ({
 };
 
 const Works: React.FC = () => {
-  const [project, setProject] = useState<DocumentProject[]>([]);
-
-  const fetchData = async (): Promise<void> => {
-    const snapshot = await getDocs(projectsRef);
-    const documentData = snapshot.docs.map((doc, index) => {
-      const { name, description, tags, image, source_code_link, subname } = doc.data();
-
-      return {
-        index: index as number,
-        name: name as string,
-        description: description as string,
-        tags: tags as Tag[],
-        image: image as string,
-        source_code_link: source_code_link as string,
-        subname: subname as string
-      };
-    });
-    setProject(documentData);
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
 
   return (
     <motion.section
@@ -113,14 +79,13 @@ const Works: React.FC = () => {
         &nbsp;
       </span>
 
-      <motion.div>
+      <div>
         <p className={`${styles.sectionSubText}`}>Mi Trabajo</p>
         <h2 className={`${styles.sectionHeadText}`}>Proyectos Destacados.</h2>
-      </motion.div>
+      </div>
 
       <div className='w-full flex'>
-        <motion.p
-          variants={fadeIn('', '', 0.1, 1)}
+        <p
           className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
           En mi trayectoria, he tenido el privilegio de participar en proyectos
@@ -133,17 +98,16 @@ const Works: React.FC = () => {
             innovación
           </span>
           .
-        </motion.p>
+        </p>
       </div>
 
-      <motion.div
-        variants={textVariant(0.5)}
+      <div
         className='mt-20 flex flex-wrap md:w-full  gap-7'
       >
-        {project.map((project, index) => (
+        {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} {...project} />
         ))}
-      </motion.div>
+      </div>
     </motion.section>
   );
 };
