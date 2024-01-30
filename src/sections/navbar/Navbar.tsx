@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
       <div className='w-full flex justify-between max-w-7xl mx-auto'>
         <Link
           to='/'
-          className='flex items-center max-[997px]:items-start max-md:items-center  max-[262px]:items-start gap-3'
+          className='flex items-center gap-3'
           onClick={() => {
             setActive('');
             window.scrollTo(0, 0);
@@ -25,11 +25,11 @@ const Navbar: React.FC = () => {
           <p className='text-white text-[18px] font-semibold cursor-pointer flex max-md:flex-col mr-10 max-md:mr-8 '>
             Daniel Gómez &nbsp;
             <span className='md:block hidden'>
-              |&nbsp; Productor de Sonido y Desarrollador
+              |&nbsp; Productor de Sonido y Desarrollador Web
             </span>
           </p>
         </Link>
-        <ul className='list-none hidden sm:flex  max-md:items-center max-[997px]:items-start  items-center flex-row gap-10'>
+        <ul className='list-none hidden lg:flex  max-[1239px]:items-start  items-center flex-row gap-10'>
           {navLinks.map((Link) => (
             <li
               key={Link.id}
@@ -44,7 +44,7 @@ const Navbar: React.FC = () => {
             </li>
           ))}
         </ul>
-        <div className='sm:hidden flex flex-1 justify-end items-center'>
+        <div className='lg:hidden flex flex-1 justify-end items-center'>
           <img
             src={toggle ? close : menu}
             alt='menu icon'
