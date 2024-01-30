@@ -130,6 +130,11 @@
   -webkit-text-fill-color: transparent;
 }
 
+.backdrop-rounded-xl {
+    backdrop-filter: blur(10px);
+    @apply rounded-full 
+  }
+
 /* canvas- styles */
 .canvas-loader {
   font-size: 10px;

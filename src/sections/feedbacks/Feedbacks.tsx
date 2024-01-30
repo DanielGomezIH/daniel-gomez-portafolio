@@ -8,7 +8,6 @@ interface FeedbackCardProps {
   testimonial: string;
   name: string;
   designation: string;
-  company: string;
   image: string;
 }
 
@@ -17,12 +16,11 @@ const FeedbackCard: React.FC<FeedbackCardProps> = ({
   testimonial,
   name,
   designation,
-  company,
   image,
 }) => (
   <motion.div
     variants={fadeIn('', 'spring', index * 0.5, 0.75)}
-    className='bg-black-200 p-10 rounded-3xl w-[320px] max-[639px]:w-full'
+    className='bg-black-200 p-10 rounded-3xl w-[400px] max-[639px]:w-full'
   >
     <p className='text-white font-black text-[48px]'>''</p>
 
@@ -35,7 +33,7 @@ const FeedbackCard: React.FC<FeedbackCardProps> = ({
             <span className='blue-text-gradient'>@</span> {name}
           </p>
           <p className='mt-1 text-secondary text-[14px]'>
-            {designation} of {company}
+            {designation}
           </p>
         </div>
 
@@ -64,13 +62,13 @@ const Feedbacks: React.FC = () => {
           className={`${styles.padding} bg-tertiary rounded-2xl min-h-[300px]`}
         >
           <motion.div>
-            <p className={`${styles.heroSubText}`}>What others say</p>
+            <p className={`${styles.heroSubText}`}>A las personas les gusta lo que hago</p>
             <h2 className={`${styles.heroHeadText}`}>Comentarios</h2>
           </motion.div>
         </div>
         <motion.div
           variants={textVariant(0.5)}
-          className={`${styles.paddingX} -mt-10 pb-14 flex flex-wrap gap-7`}
+          className={`${styles.paddingX} -mt-10 pb-14 flex flex-wrap justify-evenly gap-7`}
         >
           {testimonials.map((testimonial, index) => (
             <FeedbackCard

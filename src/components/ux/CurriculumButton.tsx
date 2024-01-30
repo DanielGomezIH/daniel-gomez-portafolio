@@ -1,8 +1,8 @@
-import { DocumentCurriculum, curriculums } from '../../data/Constants';
+import { curriculums } from '../../data/Constants';
 
 
 
-const CurriculumButton: React.FC<DocumentCurriculum> = () => {
+const CurriculumButton: React.FC = () => {
   return (
     <>
       {curriculums.map((document) => (

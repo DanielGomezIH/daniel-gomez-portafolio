@@ -1,14 +1,11 @@
 import { Tilt } from 'react-tilt';
-import { motion } from 'framer-motion';
 import { styles } from '../../Styles';
 import { youtube } from '../../assets';
-import { fadeIn, textVariant } from '../../utils/motion';
 import { Project, projects } from '../../data/Constants';
 
 
 
 const ProjectCard: React.FC<Project> = ({
-  index,
   name,
   description,
   tags,
@@ -17,7 +14,7 @@ const ProjectCard: React.FC<Project> = ({
   subname
 }) => {
   return (
-    <motion.div variants={fadeIn('up', 'spring', index * 0.5, 0.75)}>
+    <div>
       <Tilt
         options={{
           max: 45,
@@ -61,18 +58,15 @@ const ProjectCard: React.FC<Project> = ({
           ))}
         </div>
       </Tilt>
-    </motion.div>
+    </div>
   );
 };
 
 const Works: React.FC = () => {
 
   return (
-    <motion.section
-      variants={textVariant(0)}
-      initial='hidden'
-      whileInView='show'
-      viewport={{ once: true, amount: 0.25 }}
+    <section
+
       className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
     >
       <span className='hash-span' id='proyectos'>
@@ -108,7 +102,7 @@ const Works: React.FC = () => {
           <ProjectCard key={`project-${index}`} {...project} />
         ))}
       </div>
-    </motion.section>
+    </section>
   );
 };
 

@@ -12,6 +12,8 @@ import {
   CAPITULO_3C,
   COL_flag,
   USA_flag,
+  nicolas,
+  martin,
 } from '../assets';
 
 export interface NavLink {
@@ -49,7 +51,6 @@ interface Testimonial {
   testimonial: string;
   name: string;
   designation: string;
-  company: string;
   image: string;
 }
 
@@ -270,27 +271,17 @@ const experiences: Experience[] = [
 const testimonials: Testimonial[] = [
   {
     testimonial:
-      'I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.',
-    name: 'Sara Lee',
-    designation: 'CFO',
-    company: 'Acme Co',
-    image: 'https://randomuser.me/api/portraits/women/4.jpg',
+      'He trabajado con Daniel en varias ocasiones, lo considero una persona bastante seria ante los proyectos, lo he visto llevarse a sus limites por la búsqueda de un resultado de calidad.',
+    name: 'Nicolás Patiño',
+    designation: 'Director y Montajista',
+    image: nicolas,
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: 'Chris Brown',
-    designation: 'COO',
-    company: 'DEF Corp',
-    image: 'https://randomuser.me/api/portraits/men/5.jpg',
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: 'Lisa Wang',
-    designation: 'CTO',
-    company: '456 Enterprises',
-    image: 'https://randomuser.me/api/portraits/women/6.jpg',
+      'Tiene la habilidad para diseñar y crear soluciones innovadoras, y se refleja en su experiencia en el desarrollo de aplicaciones de alta calidad.',
+    name: 'Martín Rubiano',
+    designation: 'Desarrollador Web',
+    image: martin,
   },
 ];
 

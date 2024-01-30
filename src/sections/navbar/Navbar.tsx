@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
           <p className='text-white text-[18px] font-semibold cursor-pointer flex max-md:flex-col mr-10 max-md:mr-8 '>
             Daniel Gómez &nbsp;
             <span className='md:block hidden'>
-              |&nbsp; Productor de Sonido y Desarrollador Web
+              |&nbsp; Productor de Sonido y Desarrollador
             </span>
           </p>
         </Link>

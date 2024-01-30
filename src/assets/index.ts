@@ -1,3 +1,5 @@
+import productor_musical from './png/productor_musical.png'
+
 import banda_sonora from './png/habilidades/banda_sonora.png';
 import doblaje_adr from './png/habilidades/doblaje_adr.png';
 import grabación_multitrack from './png/habilidades/grabación_multitrack.png';
@@ -21,7 +23,11 @@ import CAPITULO_1C from './gif/LA LLAVE DE LA VIDA/CAPITULO_1C.gif';
 import CAPITULO_2C from './gif/LA LLAVE DE LA VIDA/CAPITULO_2C.gif';
 import CAPITULO_3C from './gif/LA LLAVE DE LA VIDA/CAPITULO_3C.gif';
 
+import nicolas from './png/testimonios/nicolas.jpeg'
+import martin from './png/testimonios/martin.png'
+
 export {
+  productor_musical,
   banda_sonora,
   doblaje_adr,
   grabación_multitrack,
@@ -41,4 +47,6 @@ export {
   CAPITULO_1C,
   CAPITULO_2C,
   CAPITULO_3C,
+  nicolas,
+  martin,
 };

@@ -1,7 +1,5 @@
 /* eslint-disable react-refresh/only-export-components */
-import { motion } from 'framer-motion';
 import { styles } from '../../Styles';
-import { textVariant } from '../../utils/motion';
 import { ServiceCard } from '..';
 import { services } from '../../data/Constants';
 import { CurriculumButton } from '../../components/ux';
@@ -11,20 +9,16 @@ import { RiLinkedinBoxLine } from '@remixicon/react';
 
 const About: React.FC = () => {
   return (
-    <motion.section
-      variants={textVariant(0)}
-      initial='hidden'
-      whileInView='show'
-      viewport={{ once: true, amount: 0.25 }}
+    <section
       className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
     >
       <span className='hash-span' id='conóceme'>
         &nbsp;
       </span>
-      <motion.div>
+      <div>
         <p className={`${styles.sectionSubText}`}>Introducción</p>
         <h2 className={`${styles.sectionHeadText}`}>¿Quién soy?</h2>
-      </motion.div>
+      </div>
 
       <div className='flex flex-row gap-8 max-lg:gap-0 max-sm:flex-col items-start'>
         <div className='flex flex-col justify-start items-start '>
@@ -105,16 +99,15 @@ const About: React.FC = () => {
           </h3>
         </div>
 
-        <motion.div
-          variants={textVariant(0.5)}
+        <div
           className='mt-10 flex flex-wrap justify-start gap-10'
         >
           {services.map((service, index) => (
             <ServiceCard key={service.title} index={index} {...service} />
           ))}
-        </motion.div>
+        </div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 
