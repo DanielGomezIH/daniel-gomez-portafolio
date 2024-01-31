@@ -132,7 +132,7 @@
 
 .backdrop-rounded-xl {
     backdrop-filter: blur(10px);
-    @apply rounded-full 
+    @apply rounded-full
   }
 
 /* canvas- styles */
